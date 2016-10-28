@@ -7,6 +7,7 @@
   "btnAriaLabelledby": "Button",
   "tagText" : "default",
   "tagClass" : "tag-default",
+  "filterList": ["thing one", "thing two", "thing three"],
   "img": {
     "avatar": {
       "src": "http://placeimg.com/100/100/people",
