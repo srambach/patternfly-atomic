@@ -5620,6 +5620,8 @@ tbody.collapse.in {
 
 .nav-link {
   color: #4d5258; }
+  .nav-link:focus, .nav-link:active, .nav-link:hover {
+    color: #4d5258; }
 
 .nav-tabs .nav-link {
   padding: 0.25rem 1rem; }
@@ -5634,7 +5636,6 @@ tbody.collapse.in {
 .pf-nav-tabs .nav-link {
   border-width: 0 0 2px 0;
   border-color: transparent;
-  font-size: 0.875em;
   margin: 0.75rem 1rem 0;
   padding: 0; }
   .pf-nav-tabs .nav-link:focus, .pf-nav-tabs .nav-link:active, .pf-nav-tabs .nav-link:hover {
@@ -5645,8 +5646,13 @@ tbody.collapse.in {
       border-color: #0088ce; }
 
 .pf-nav-tabs .dropdown-menu {
-  margin-left: 1rem;
   margin-top: -1px; }
+
+.nav-tabs + .pf-nav-tabs .nav-link {
+  font-size: 0.875em; }
+
+.nav-tabs + .pf-nav-tabs .dropdown-menu {
+  margin-left: 1rem; }
 
 .navbar {
   position: relative;

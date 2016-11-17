@@ -1,7 +1,7 @@
-{{!-- dropdown - adds a tab with a dropdown dropdownActive - shows the dropdown tab menu open if true secondaryLevel - adds a secondary level menu secondaryDropdown - adds a dropdown tab to the secondary menu secondaryDropdownActive - shows the dropdown
-open if true --}}
+{{!-- pfTabsAsPrimary - displays the menu as the Patternfly style rather than default tab style dropdown - adds a tab with a dropdown dropdownActive - shows the dropdown tab menu open if true secondaryLevel - adds a secondary level menu secondaryDropdown
+- adds a dropdown tab to the secondary menu secondaryDropdownActive - shows the dropdown open if true --}}
 
-<ul class="nav nav-tabs">
+<ul class="nav nav-tabs {{#if pfTabsAsPrimary }}pf-nav-tabs{{/if }}">
   <li role="presentation" class="nav-item"><a href="#" class="nav-link {{#unless dropdownActive }}active{{/unless }}">Tab One</a></li>
   <li role="presentation" class="nav-item"><a href="#" class="nav-link">Tab Two</a></li>
   <li role="presentation" class="nav-item"><a href="#" class="nav-link">Tab Three</a></li>
@@ -11,8 +11,8 @@ open if true --}}
   {{#if dropdown }}
   <li role="presentation" class="nav-item dropdown {{#if dropdownActive }}open{{/if }}">
     <a class="nav-link dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="true" data-toggle="dropdown" href="#">
-        Dropdown
-      </a>
+    Dropdown
+  </a>
     <div class="dropdown-menu" role="menu">
       <a class="dropdown-item">Action</a></a>
       <a class="dropdown-item">Another action</a></a>
@@ -45,6 +45,5 @@ open if true --}}
     </div>
   </li>
   {{/if }}
-
 </ul>
 {{/if }}
